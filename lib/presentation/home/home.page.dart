@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:imc_app/core/theme/app_theme.dart';
+import 'package:imc_app/presentation/home/components/gender_selector.dart';
 
 class HomePage extends StatelessWidget {
 
@@ -20,8 +21,15 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
       ),
    
-      body: const Center(
-         child: Text('HomePage'),
+      body: Padding(
+        padding: const EdgeInsets.symmetric( vertical: 16 ),
+        child: const Center(
+          child: Column(
+            children: [
+              GenderSelector()
+            ],
+          )
+        ),
       ),
     );
   }
