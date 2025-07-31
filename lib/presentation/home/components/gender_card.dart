@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imc_app/shared/widgets/small_card.dart';
 
 class GenderCard extends StatelessWidget {
 
@@ -19,20 +20,15 @@ class GenderCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPress,
-      child: Container(
-        width: 180,
-        height: 180,
-        decoration: BoxDecoration( 
-          borderRadius: BorderRadius.all( Radius.circular(20) ),
-          color: color,
-         ),
+      child: SmallCard(
+        color: color, 
         child: Column(
           children: [
             Icon( icon, size: 140, color: Colors.white, ),
             Text(lable.toUpperCase(), style: TextStyle( color: Colors.white, fontSize: 18 ),)
           ],
-        ),
-      ),
+        )
+      )
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:imc_app/presentation/home/components/gender_card.dart';
-import 'package:imc_app/presentation/home/controller/home.controller.dart';
+import 'package:imc_app/shared/controllers/imc.controller.dart';
 
 
 
@@ -12,30 +12,30 @@ class GenderSelector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final HomeController homeController = Get.put(HomeController());
+    final ImcController imcController = Get.put(ImcController());
 
     return Obx(() {
 
-      final isMale = homeController.isMaleGenderSelected.value;
-      final isFemale = homeController.isFemaleGenderSelected.value;
+      final isMale = imcController.isMaleGenderSelected.value;
+      final isFemale = imcController.isFemaleGenderSelected.value;
 
       return Row(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           
           GenderCard(
             lable: "Hombre", 
             icon: Icons.male_rounded,
-            onPress: homeController.selectMaleGender,
-            color: homeController.getCardColor(isSelected: isMale),
+            onPress: imcController.selectMaleGender,
+            color: imcController.getCardColor(isSelected: isMale),
           ),
 
           GenderCard(
             lable: "Mujer", 
             icon: Icons.female_rounded,
-            onPress: homeController.selectFemaleGender,
-            color: homeController.getCardColor(isSelected: isFemale),
+            onPress: imcController.selectFemaleGender,
+            color: imcController.getCardColor(isSelected: isFemale),
           ),
 
         ],
