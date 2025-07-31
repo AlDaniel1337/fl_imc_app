@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:imc_app/core/navigation/navigation.dart';
 import 'package:imc_app/core/theme/app_theme.dart';
 import 'package:imc_app/presentation/home/home.page.dart';
 
@@ -18,6 +19,9 @@ class MyApp extends StatelessWidget {
       title: 'IMC app',
       theme: AppTheme.theme(),
       home: const HomePage(),
+      initialRoute: Navigation.home,
+      getPages: Navigation.getRoutes(),
+      navigatorKey: Get.key,
     );
   }
 }
