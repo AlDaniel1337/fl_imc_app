@@ -29,13 +29,13 @@ Ningún paso extra es necesario
 ## <lr>Imágenes</lr>
 
 **Ejemplo masculino**
-<div style="display: flex; justify-content: center; align-items: center; height: 400px;">
+<div style="display: flex; justify-content: center; align-items: center; height: 200px;">
   <img src="./assets/imcApp1.png" style="margin: 0 10px;" />
   <img src="./assets/imcApp2.png" style="margin: 0 10px;" />
 </div>
 
 **Ejemplo femenino**
-<div style="display: flex; justify-content: center; align-items: center; height: 400px;">
+<div style="display: flex; justify-content: center; align-items: center; height: 200px;">
   <img src="./assets/imcApp3.png" style="margin: 0 10px;" />
   <img src="./assets/imcApp4.png" style="margin: 0 10px;" />
 </div>
